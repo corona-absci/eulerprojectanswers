@@ -1,0 +1,25 @@
+list3=[] #define array for multiples of 3
+n = 3
+i = 0
+
+while len(list3) < (1000/3): #stops loop when list reaches 1000
+    list3.append(i) #add i to list3
+    i=i+n #3 gets added to i every loop
+    
+list5=[] #define array for multiples of 5
+m=5
+j=0
+while len(list5)<(1000/5): #does not add multiples of 3
+    list5.append(j) #add i to list5
+    j=j+m
+    
+    
+for i in list3:
+    for j in list5:
+        if i==j:
+            list3.remove(i)
+    
+print(list3) #double check we have all multiples of 3
+print(list5) #double check we have all multiples of 5 
+
+print(sum(list3)+sum(list5)) #add all numbers in list3, add all numbers in list5, add them all together
